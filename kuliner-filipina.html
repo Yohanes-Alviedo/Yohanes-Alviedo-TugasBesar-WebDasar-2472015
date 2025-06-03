@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kuliner Filipina - Rasa Otentik dan Tradisi</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header>
+    <div class="container header-container">
+      <h1 class="logo">Kuliner Filipina</h1>
+      <nav>
+        <ul class="nav-list">
+          <li><a href="kuliner-filipina.html" class="active">Home</a></li>
+          <li class="dropdown">
+            <button class="dropbtn">Menu <span>▼</span></button>
+            <ul class="dropdown-content">
+              <li><a href="adobo.html">Adobo</a></li>
+              <li><a href="lechon.html">Lechon</a></li>
+              <li><a href="sinigang.html">Sinigang</a></li>
+              <li><a href="halo-halo.html">Halo-Halo</a></li>
+              <li><a href="pancit.html">Pancit</a></li>
+            </ul>
+          </li>
+          <li><a href="#about">Tentang Filipina</a></li>
+          <li><a href="#order">Pesan</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container hero-content">
+      <h2 class="hero-title">Rasakan Kekayaan Kuliner Filipina</h2>
+      <p class="hero-subtitle">Nikmati cita rasa otentik dari hidangan tradisional yang kaya akan sejarah dan budaya.</p>
+      <button id="exploreBtn" class="btn btn-primary">Jelajahi Menu</button>
+    </div>
+  </section>
+
+  <section id="menu" class="container menu-section">
+    <h2 class="section-title">Pilihan Favorit</h2>
+    <div class="grid-cards" id="foodGrid">
+      <!-- Kartu makanan akan diisi lewat JS looping -->
+    </div>
+  </section>
+
+  <section id="about" class="container about-section">
+    <h2 class="section-title">Tentang Filipina</h2>
+    <p>Filipina dikenal dengan pulau-pulau yang indah dan warisan kuliner yang unik. Masakan Filipina menggabungkan cita rasa asam, manis, dan gurih dalam satu hidangan. Tradisi memasak diwariskan turun-temurun dengan resep rahasia yang membuat setiap sajian begitu khas.</p>
+    <ul class="list-info">
+      <li>Populasi: Lebih dari 110 juta orang</li>
+      <li>Bahasa utama: Filipino dan Inggris</li>
+      <li>Iklim tropis, kaya hasil laut dan rempah-rempah</li>
+      <li>Festival kuliner tahunan di berbagai kota</li>
+    </ul>
+  </section>
+
+  <section id="order" class="container order-section">
+    <h2 class="section-title">Pesan Sekarang</h2>
+    <form id="orderForm" class="order-form">
+      <label for="name">Nama:</label>
+      <input type="text" id="name" name="name" placeholder="Masukkan nama Anda" required />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="Masukkan email Anda" required />
+
+      <label for="dish">Pilih Menu:</label>
+      <select id="dish" name="dish" required>
+        <option value="" disabled selected>-- Pilih Menu --</option>
+        <option value="Adobo">Adobo</option>
+        <option value="Lechon">Lechon</option>
+        <option value="Sinigang">Sinigang</option>
+        <option value="Halo-Halo">Halo-Halo</option>
+        <option value="Pancit">Pancit</option>
+      </select>
+
+      <label for="quantity">Jumlah:</label>
+      <input type="number" id="quantity" name="quantity" min="1" max="10" value="1" required />
+
+      <button type="submit" class="btn btn-primary">Pesan</button>
+      <p id="formMessage" class="form-message"></p>
+    </form>
+  </section>
+
+  <footer>
+    &copy; 2025 Kuliner Filipina. Yohanes Alviedo Matondang - 2472015
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

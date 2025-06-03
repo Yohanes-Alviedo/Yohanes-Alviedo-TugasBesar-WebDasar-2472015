@@ -1,0 +1,360 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+
+/* RESET & GLOBAL */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(120deg, #ffecd2 0%, #fcb69f 100%);
+  color: #4b443c;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* CONTAINER */
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* HEADER */
+header {
+  background: #d9480f;
+  color: white;
+  padding: 1rem 0;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 2rem;
+  letter-spacing: 2px;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+}
+
+/* NAVIGATION */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+nav ul li {
+  position: relative;
+}
+
+nav ul li a,
+nav ul li button {
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  background: none;
+  border: none;
+  padding: 0.4rem 0.7rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  user-select: none;
+}
+
+nav ul li a:hover,
+nav ul li button:hover,
+nav ul li a.active {
+  background-color: #fcb69f;
+  color: #6a2c00;
+}
+
+/* Dropdown */
+.dropdown {
+  position: relative;
+}
+
+.dropbtn span {
+  font-size: 0.7rem;
+  margin-left: 4px;
+}
+
+/* Dropdown Content */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fcb69f;
+  min-width: 140px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  border-radius: 6px;
+  top: 2.5rem;
+  left: 0;
+  z-index: 1001;
+  transition: opacity 0.3s ease;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.dropdown-content li a {
+  display: block;
+  padding: 0.6rem 1rem;
+  color: #6a2c00;
+  font-weight: 600;
+  border-radius: 6px;
+}
+
+.dropdown-content li a:hover {
+  background-color: #d9480f;
+  color: white;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content,
+.dropdown:focus-within .dropdown-content {
+  display: block;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* HERO SECTION */
+.hero {
+  background: url('Archipelago\ Philippines.jpg') center/cover no-repeat;
+  color: white;
+  text-align: center;
+  padding: 6rem 1rem 4rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+  animation: fadeInHero 1.5s ease forwards;
+}
+
+@keyframes fadeInHero {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  letter-spacing: 1.5px;
+}
+
+.hero-subtitle {
+  font-weight: 300;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* BUTTONS */
+.btn {
+  font-weight: 700;
+  padding: 0.8rem 2rem;
+  border-radius: 30px;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  user-select: none;
+  font-size: 1rem;
+  box-shadow: 0 6px 10px rgba(0,0,0,0.2);
+  background-color: #d9480f;
+  color: white;
+}
+
+.btn:hover {
+  background-color: #fcb69f;
+  color: #6a2c00;
+  transform: scale(1.05);
+}
+
+/* MENU SECTION */
+.menu-section {
+  padding: 3rem 0 2rem;
+}
+
+.section-title {
+  text-align: center;
+  color: #a63e0f;
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  border-bottom: 3px solid #fcb69f;
+  padding-bottom: 0.5rem;
+}
+
+/* GRID CARDS */
+.grid-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.8rem;
+}
+
+/* FOOD CARD */
+.card {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 20px rgba(0,0,0,0.2);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.card:hover img {
+  transform: scale(1.05);
+}
+
+.card-content {
+  padding: 1rem;
+}
+
+.card-content h3 {
+  margin-bottom: 0.5rem;
+  color: #d9480f;
+  font-weight: 700;
+}
+
+.card-content p {
+  font-size: 0.95rem;
+  color: #5a4b3a;
+  line-height: 1.4;
+}
+
+/* ABOUT SECTION */
+.about-section {
+  background: #fff8f0;
+  padding: 3rem 1rem 3rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.05);
+  margin: 2rem 0;
+  align-self: center;
+}
+
+.list-info {
+  list-style-type: square;
+  margin-top: 1rem;
+  padding-left: 1.5rem;
+  color: #a63e0f;
+  font-weight: 600;
+}
+
+/* ORDER FORM SECTION */
+.order-section {
+  background: white;
+  padding: 3rem 1rem 3rem;
+  border-radius: 15px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  margin-bottom: 3rem;
+}
+
+.order-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 480px;
+  margin: 0 auto;
+  gap: 1rem;
+}
+
+.order-form label {
+  font-weight: 600;
+  color: #a63e0f;
+}
+
+.order-form input,
+.order-form select {
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  border: 2px solid #fcb69f;
+  border-radius: 8px;
+  transition: border-color 0.3s ease;
+}
+
+.order-form input:focus,
+.order-form select:focus {
+  outline: none;
+  border-color: #d9480f;
+}
+
+.form-message {
+  margin-top: 0.5rem;
+  color: #d9480f;
+  font-weight: 700;
+  height: 1.5rem;
+  text-align: center;
+}
+
+/* FOOTER */
+footer {
+  background: #d9480f;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  font-weight: 600;
+  box-shadow: inset 0 1px 2px rgba(255,255,255,0.15);
+}
+
+/* RESPONSIVE MEDIA QUERIES */
+
+/* Tablet */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+
+  .hero-title {
+    font-size: 1.8rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .order-form {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .menu-section {
+    padding: 2rem 0 1rem;
+  }
+}
