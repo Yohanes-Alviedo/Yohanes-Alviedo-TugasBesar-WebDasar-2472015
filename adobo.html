@@ -11,13 +11,19 @@
     <div class="header-container">
       <h1>Kuliner Filipina</h1>
       <nav>
-        <ul>
-          <li><a href="kuliner-filipina.html">Beranda</a></li>
-          <li><a href="adobo.html" class="active">Adobo</a></li>
-          <li><a href="lechon.html">Lechon</a></li>
-          <li><a href="sinigang.html">Sinigang</a></li>
-          <li><a href="halo-halo.html">Halo-Halo</a></li>
-          <li><a href="pancit.html">Pancit</a></li>
+        <ul class="nav-list">
+          <li><a href="kuliner-filipina.html">Home</a></li>
+          <li class="dropdown">
+            <button class="dropbtn">Menu <span>▼</span></button>
+            <ul class="dropdown-content">
+              <li><a href="adobo.html" class="active">Adobo</a></li>
+              <li><a href="lechon.html">Lechon</a></li>
+              <li><a href="sinigang.html">Sinigang</a></li>
+              <li><a href="halo-halo.html">Halo-Halo</a></li>
+              <li><a href="pancit.html">Pancit</a></li>
+            </ul>
+          </li>
+          <li><a href="#about">Tentang Filipina</a></li>
         </ul>
       </nav>
     </div>
@@ -27,14 +33,67 @@
     <section class="about-section">
       <h2>Adobo</h2>
       <img src="OSK.jpeg" alt="Adobo" style="max-width: 100%; border-radius: 12px; margin-top: 1rem;" />
-      <p>
-        Adobo adalah hidangan khas Filipina yang sangat populer, terbuat dari ayam atau babi yang dimasak dengan saus kecap, cuka, dan bawang putih. Rasanya gurih dan asam, sering dianggap sebagai masakan nasional Filipina.
-      </p>
+      <p>Adobo adalah hidangan khas Filipina yang sangat populer, terbuat dari ayam atau babi yang dimasak dengan saus kecap, cuka, dan bawang putih. Rasanya gurih dan asam, sering dianggap sebagai masakan nasional Filipina.</p>
       <ul class="list-info">
         <li>Bahan utama: ayam atau babi</li>
         <li>Rasa khas: asam, gurih, dan sedikit manis</li>
         <li>Sering disajikan dengan nasi putih hangat</li>
         <li>Masakan yang mudah diolah dan tahan lama</li>
+      </ul>
+      <button class="btn btn-primary" id="orderBtn">Pesan Sekarang</button>
+    </section>
+
+    <section class="video-section">
+      <h3>Video Resep</h3>
+      <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/qimbNitugcE" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <section class="description-section">
+      <h3>Deskripsi</h3>
+      <div class="description-container">
+        <p>Adobo adalah hidangan yang kaya rasa dan sangat disukai di Filipina. Hidangan ini biasanya dimasak dengan cara direbus dalam campuran kecap, cuka, dan bawang putih, memberikan rasa yang unik dan lezat.</p>
+      </div>
+    </section>
+
+    <section class="recipe-section">
+      <h3>Resep</h3>
+      <div class="recipe-container">
+        <ul>
+          <li>4 potong ayam (paha atas, drumstick, atau ayam lepas tulang)</li>
+          <li>1/2 cup Kecap</li>
+          <li>garam secukupnya</li>
+          <li>2 sdm cuka putih</li>
+          <li>2 sdm bawang putih cincang halus</li>
+          <li>2 lbr daun salam</li>
+          <li>1 sdt peppercorn/merica kasar</li>
+          <li>1/2 daun bombay medium, iris kasar</li>
+          <li>1 sdm Kecap Manis</li>
+          <li>2 buah kentang, potong kecil/tipis</li>
+          <li>Air</li>
+          <li>Garnish:</li>
+          <li>Daun Bawang</li>
+        </ul>
+        <h3>Langkah-langkah</h3>
+        <ul>
+          <li>1. Campurkan bahan-bahan yang sudah disiapkan, aduk rata, dan campurkan dengan ayam. Kemudian masukkan ke dalam wadah tertutup, marinasi 2-3 jam di dalam kulkas.</li>
+          <li>2. Goreng ayam lalu masukkan bawang bombay, bawang putih, daun salam, dan air.</li>
+          <li>3. Tambahkan juga sisa marinasi, merica, garam, dan cuka.</li>
+          <li>4. Masukkan kentang dan tunggu hingga matang.</li>
+          <li>5. Chicken Adobo siap disajikan.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="about" class="about-section">
+      <h2>Tentang Filipina</h2>
+      <p>Filipina adalah negara kepulauan yang terdiri dari lebih dari 7.000 pulau. Dikenal dengan keindahan alamnya, budaya yang kaya, dan masakan yang beragam, Filipina menawarkan pengalaman yang unik bagi para pengunjung.</p>
+      <ul>
+        <li>Populasi: Lebih dari 110 juta orang</li>
+        <li>Bahasa utama: Filipino dan Inggris</li>
+        <li>Iklim tropis dengan banyak hasil laut dan rempah-rempah</li>
+        <li>Festival kuliner tahunan di berbagai kota</li>
       </ul>
     </section>
   </main>
@@ -42,5 +101,12 @@
   <footer>
     &copy; 2025 Kuliner Filipina. Yohanes Alviedo Matondang - 2472015
   </footer>
+
+  <script>
+    document.getElementById('orderBtn').addEventListener('click', () => {
+      // Redirect to the order form or show a modal
+      window.location.href = 'kuliner-filipina.html#order'; // Adjust the link as needed
+    });
+  </script>
 </body>
 </html>

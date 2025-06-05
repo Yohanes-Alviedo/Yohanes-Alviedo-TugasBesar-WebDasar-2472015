@@ -11,13 +11,19 @@
     <div class="header-container">
       <h1>Kuliner Filipina</h1>
       <nav>
-        <ul>
-          <li><a href="kuliner-filipina.html">Beranda</a></li>
-          <li><a href="adobo.html">Adobo</a></li>
-          <li><a href="lechon.html" class="active">Lechon</a></li>
-          <li><a href="sinigang.html">Sinigang</a></li>
-          <li><a href="halo-halo.html">Halo-Halo</a></li>
-          <li><a href="pancit.html">Pancit</a></li>
+        <ul class="nav-list">
+          <li><a href="kuliner-filipina.html">Home</a></li>
+          <li class="dropdown">
+            <button class="dropbtn">Menu <span>▼</span></button>
+            <ul class="dropdown-content">
+              <li><a href="adobo.html">Adobo</a></li>
+              <li><a href="lechon.html" class="active">Lechon</a></li>
+              <li><a href="sinigang.html">Sinigang</a></li>
+              <li><a href="halo-halo.html">Halo-Halo</a></li>
+              <li><a href="pancit.html">Pancit</a></li>
+            </ul>
+          </li>
+          <li><a href="#about">Tentang Filipina</a></li>
         </ul>
       </nav>
     </div>
@@ -36,11 +42,122 @@
         <li>Hidangan tradisional untuk pesta dan festival</li>
         <li>Disajikan dengan saus liver khas</li>
       </ul>
+      <button id="orderBtn" class="btn btn-primary">Pesan Sekarang</button>
     </section>
-  </main>
+
+    <section class="video-section">
+      <h3>Video Resep</h3>
+      <div class="video-container">
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/UBVg5Nv2VvY" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <section class="description-section">
+      <h3>Deskripsi</h3>
+      <div class="description-container">
+        <p>Lechon adalah hidangan ikonik Filipina yang terbuat dari babi panggang utuh, terkenal dengan kulitnya yang renyah dan daging yang lembut. Hidangan ini sering disajikan pada acara-acara khusus dan perayaan.</p>
+      </div>
+    </section>
+
+    <section class="recipe-section">
+      <h3>Resep</h3>
+      <div class="recipe-container">
+        <ul>
+          <li>1 ekor babi utuh (15–20 kg), dibersihkan dan disiapkan</li>
+          <li>Garam dan merica (secukupnya)</li>
+          <li>3–5 kepala bawang putih, dihaluskan</li>
+          <li>10–15 batang serai</li>
+          <li>5 bawang bombay, dipotong empat</li>
+          <li>3–4 lembar daun salam</li>
+          <li>3 cangkir kecap asin</li>
+          <li>Daun pisang atau aluminium foil (untuk membungkus perut)</li>
+          <li>Minyak goreng atau minyak annatto (untuk mengoles)</li>
+        </ul>
+
+        <h3>Langkah-langkah</h3>
+        <ul>
+          <li>
+            <strong>Membersihkan dan Menyiapkan Babi</strong>
+            <ul>
+              <li>Pastikan babi telah dibersihkan dengan benar, termasuk menghilangkan bulu dan jeroan.</li>
+              <li>Keringkan bagian dalam dan luar babi menggunakan tisu dapur.</li>
+            </ul>
+          </li>
+          <li>
+            <strong>Memberi Bumbu Bagian Dalam</strong>
+            <ul>
+              <li>Gosok bagian dalam perut dengan garam dan merica.</li>
+              <li>Isi perut babi dengan bahan aromatik berikut:</li>
+              <ul>
+                <li>Bawang putih yang telah dihancurkan</li>
+                <li>Serai (dilipat dan diikat)</li>
+                <li>Bawang bombay</li>
+                <li>Daun salam</li>
+              </ul>
+              <li>Opsional: Tuangkan 1 cangkir kecap asin dan 1/2 botol Sprite ke dalam perut untuk menambah rasa dan kelembapan.</li>
+            </ul>
+          </li>
+          <li>
+            <strong>Menjahit atau Mengikat Perut</strong>
+            <ul>
+              <li>Jahit perut babi menggunakan benang khusus daging atau pin logam.</li>
+              <li>Bungkus perut yang telah diisi dengan daun pisang atau aluminium foil untuk menjaga kelembapan.</li>
+            </ul>
+          </li>
+          <li>
+            <strong>Memasang pada Alat Pemanggang (Spit)</strong>
+            <ul>
+              <li>Masukkan batang logam dengan kuat ke dalam tubuh babi.</li>
+              <li>Ikat kaki babi erat-erat ke batang menggunakan kawat atau tali agar tidak bergeser saat dipanggang.</li>
+            </ul>
+          </li>
+          <li>
+            <strong>Memanggang Babi</strong>
+            <ul>
+              <li>Panggang babi secara perlahan di atas bara api sedang (bukan api langsung).</li>
+              <li>Putar babi secara terus-menerus selama 4–6 jam tergantung ukuran babi.</li>
+              <li>Jaga jarak yang konsisten dari bara api agar tidak gosong.</li>
+            </ul>
+          </li>
+          <li>
+            <strong>Mengoles untuk Kulit Renyah</strong>
+            <ul>
+              <li>Setiap 20–30 menit, olesi kulit babi dengan:</li>
+              <ul>
+                <li>Minyak goreng atau minyak annatto</li>
+                <li>Campuran kecap asin dan Sprite</li>
+              </ul>
+              <li>Hal ini membantu kulit menjadi keemasan dan renyah.</li>
+            </ul>
+          </li>
+          <li>
+            <strong>Memeriksa Kematangan</strong>
+            <ul>
+              <li>Gunakan termometer daging atau tusuk bagian paha — jika matang, cairan yang keluar akan bening.</li>
+              <li>Kulit seharusnya berwarna cokelat keemasan dan tampak melepuh.</li>
+            </ul>
+          </li>
+          <li>
+            <strong>Mengistirahatkan dan Menyajikan</strong>
+            <ul>
+              <li>Biarkan lechon istirahat selama 15–30 menit sebelum dipotong.</li>
+              <li>Sajikan dengan saus lechon (dibuat dari hati, cuka, gula merah, bawang putih, dan remah roti) atau cuka dengan cabai dan bawang putih.</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main> 
 
   <footer>
     &copy; 2025 Kuliner Filipina. Yohanes Alviedo Matondang - 2472015
   </footer>
+
+  <script>
+    document.getElementById('orderBtn').addEventListener('click', () => {
+      // Redirect to the order form or show a modal
+      window.location.href = 'kuliner-filipina.html#order'; // Adjust the link as needed
+    });
+  </script>
 </body>
 </html>

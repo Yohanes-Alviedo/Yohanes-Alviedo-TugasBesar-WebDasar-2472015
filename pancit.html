@@ -11,13 +11,20 @@
     <div class="header-container">
       <h1>Kuliner Filipina</h1>
       <nav>
-        <ul>
-          <li><a href="kuliner-filipina.html">Beranda</a></li>
-          <li><a href="adobo.html">Adobo</a></li>
-          <li><a href="lechon.html">Lechon</a></li>
-          <li><a href="sinigang.html">Sinigang</a></li>
-          <li><a href="halo-halo.html">Halo-Halo</a></li>
-          <li><a href="pancit.html" class="active">Pancit</a></li>
+        <ul class="nav-list">
+          <li><a href="kuliner-filipina.html">Home</a></li>
+          <li class="dropdown">
+            <button class="dropbtn">Menu <span>▼</span></button>
+            <ul class="dropdown-content">
+              <li><a href="adobo.html">Adobo</a></li>
+              <li><a href="lechon.html">Lechon</a></li>
+              <li><a href="sinigang.html">Sinigang</a></li>
+              <li><a href="halo-halo.html">Halo-Halo</a></li>
+              <li><a href="pancit.html" class="active">Pancit</a></li>
+            </ul>
+          </li>
+          <li><a href="#about">Tentang Filipina</a></li>
+          <li><a href="#order">Pesan</a></li>
         </ul>
       </nav>
     </div>
@@ -36,11 +43,102 @@
         <li>Sering disajikan dalam acara pesta dan perayaan ulang tahun</li>
         <li>Mengandung simbol panjang umur dan keberuntungan</li>
       </ul>
+      <button id="orderBtn" class="btn btn-primary">Pesan Sekarang</button>
+    </section>
+
+    <section class="video-section">
+      <h3>Video Resep</h3>
+      <div class="video-container">
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/q1Nbh0LcKs0" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <section class="description-section">
+      <h3>Deskripsi</h3>
+      <div class="description-container">
+        <p>Pancit adalah hidangan mie yang kaya rasa dan sangat disukai di Filipina, sering disajikan pada acara-acara khusus dan perayaan.</p>
+      </div>
+    </section>
+
+    <section class="recipe-section">
+      <h3>Resep</h3>
+      <div class="recipe-container">
+        <ul>
+          <li>2 oz pancit canton (mie telur)</li>
+          <li>2 oz pancit bihon (mie beras)</li>
+          <li>8–10 ekor udang, dikupas</li>
+          <li>4 oz daging babi shoulder, iris tipis</li>
+          <li>4 oz dada ayam, rebus & suwir</li>
+          <li>2 cangkir kol, cincang</li>
+          <li>1 wortel, julienne</li>
+          <li>1½ cangkir buncis, iris</li>
+          <li>½ bawang bombay, iris</li>
+          <li>3 siung bawang putih, cincang</li>
+          <li>4 sdm kecap asin</li>
+          <li>4 sdm minyak goreng</li>
+          <li>½ sdt merica bubuk</li>
+          <li>2 cup air atau kaldu ayam</li>
+        </ul>
+
+        <h3>Langkah-langkah</h3>
+        <ul>
+          <li><strong>Rendam</strong>
+            <ul>
+              <li>Rendam bihon dalam air hangat selama ±10 menit, tiriskan.</li>
+            </ul>
+          </li>
+
+          <li><strong>Tumis</strong>
+            <ul>
+              <li>Panaskan minyak. Tumis bawang putih dan bombay hingga harum.</li>
+              <li>Tambahkan daging dan ayam suwir, masak hingga berubah warna.</li>
+            </ul>
+          </li>
+
+          <li><strong>Masukkan Udang</strong>
+            <ul>
+              <li>Tambahkan udang dan masak hingga mulai berubah warna.</li>
+            </ul>
+          </li>
+
+          <li><strong>Bumbui & Tambah Sayur</strong>
+            <ul>
+              <li>Tuang kecap, merica, dan air/kaldu. Didihkan.</li>
+              <li>Masukkan wortel, buncis, dan kol. Masak 2–3 menit hingga layu.</li>
+            </ul>
+          </li>
+
+          <li><strong>Tambah Mie Canton</strong>
+            <ul>
+              <li>Masukkan pancit canton. Aduk dan biarkan menyerap asap/dedik selama ±3 menit.</li>
+            </ul>
+          </li>
+
+          <li><strong>Campur Bihon</strong>
+            <ul>
+              <li>Tambahkan bihon. Aduk hingga semua bahan tercampur rata.</li>
+            </ul>
+          </li>
+
+          <li><strong>Sajikan</strong>
+            <ul>
+              <li>Angkat dan hidangkan hangat. Bisa ditambahkan perasan lemon atau kecap asin sebagai pelengkap.</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
     </section>
   </main>
 
   <footer>
     &copy; 2025 Kuliner Filipina. Yohanes Alviedo Matondang - 2472015
   </footer>
+
+  <script>
+    document.getElementById('orderBtn').addEventListener('click', () => {
+      // Redirect to the order form or show a modal
+      window.location.href = 'kuliner-filipina.html#order'; // Adjust the link as needed
+    });
+  </script>
 </body>
 </html>

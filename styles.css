@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
 
+
 /* RESET & GLOBAL */
 * {
   box-sizing: border-box;
@@ -358,3 +359,45 @@ footer {
     padding: 2rem 0 1rem;
   }
 }
+
+/* Kontainer untuk Video, Deskripsi, dan Resep */
+.video-section, .description-section, .recipe-section {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+  margin: 2rem 0;
+  padding: 2rem;
+}
+
+.video-container {
+  margin-top: 1rem;
+}
+
+.description-container {
+  margin-top: 1rem;
+}
+
+.recipe-container {
+  margin-top: 1rem;
+}
+
+/* Judul untuk setiap kontainer */
+.video-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the video container */
+  margin: 2rem 0;
+}
+
+.video-container {
+  width: 100%; /* Full width */
+  max-width: 800px; /* Maximum width for larger screens */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.video-container iframe {
+  width: 100%; /* Full width of the container */
+  height: 450px; /* Set a fixed height for the video */
+  border: none; /* Remove border */
+}
+

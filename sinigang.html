@@ -11,13 +11,19 @@
     <div class="header-container">
       <h1>Kuliner Filipina</h1>
       <nav>
-        <ul>
-          <li><a href="kuliner-filipina.html">Beranda</a></li>
-          <li><a href="adobo.html">Adobo</a></li>
-          <li><a href="lechon.html">Lechon</a></li>
-          <li><a href="sinigang.html" class="active">Sinigang</a></li>
-          <li><a href="halo-halo.html">Halo-Halo</a></li>
-          <li><a href="pancit.html">Pancit</a></li>
+        <ul class="nav-list">
+          <li><a href="kuliner-filipina.html">Home</a></li>
+          <li class="dropdown">
+            <button class="dropbtn">Menu <span>▼</span></button>
+            <ul class="dropdown-content">
+              <li><a href="adobo.html">Adobo</a></li>
+              <li><a href="lechon.html">Lechon</a></li>
+              <li><a href="sinigang.html" class="active">Sinigang</a></li>
+              <li><a href="halo-halo.html">Halo-Halo</a></li>
+              <li><a href="pancit.html">Pancit</a></li>
+            </ul>
+          </li>
+          <li><a href="#about">Tentang Filipina</a></li>
         </ul>
       </nav>
     </div>
@@ -36,11 +42,103 @@
         <li>Dapat menggunakan berbagai jenis daging seperti babi, sapi, atau ikan</li>
         <li>Sangat cocok disantap dengan nasi hangat</li>
       </ul>
+      <button id="orderBtn" class="btn btn-primary">Pesan Sekarang</button>
+    </section>
+
+    <section class="video-section">
+      <h3>Video Resep</h3>
+      <div class="video-container">
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/3BKsDVgIw90" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <section class="description-section">
+      <h3>Deskripsi</h3>
+      <div class="description-container">
+        <p>Sinigang adalah hidangan sup asam yang sangat disukai di Filipina, terkenal dengan rasa segar dan asam yang berasal dari tamarind atau bahan asam lainnya.</p>
+      </div>
+    </section>
+
+    <section class="recipe-section">
+      <h3>Resep</h3>
+      <div class="recipe-container">
+        <ul>
+            <li><strong>Bahan-bahan:</strong>
+              <ul>
+                <li>680 g iga babi atau pork belly</li>
+                <li>5–8 cangkir air</li>
+                <li>½ buah bawang bombay, iris kasar</li>
+                <li>2 buah tomat, potong-potong</li>
+                <li>45 g pasta asam (tamarind paste) atau sesuai selera</li>
+                <li>2 sdm saus ikan (fish sauce)</li>
+                <li>1 kubus kaldu babi (opsional)</li>
+                <li>2 cangkir ubi talas (gabi), potong kotak</li>
+                <li>½ buah lobak putih (labanos), iris</li>
+                <li>100 g terong, potong bulat</li>
+                <li>80 g kacang panjang (sitaw), potong 5 cm</li>
+                <li>4 buah okra, potong-potong</li>
+                <li>1 ikat kangkung atau sawi air</li>
+                <li>1–2 cabai hijau panjang</li>
+              </ul>
+            </li>
+        </ul>
+        <h3>Langkah-langkah</h3>
+        <ul>
+            <li><strong>1. Tumis Bumbu (opsional):</strong>
+              <ul>
+                <li>Tumis bawang bombay dan tomat hingga harum untuk menambah aroma dan rasa.</li>
+              </ul>
+            </li>
+
+            <li><strong>2. Rebus Daging:</strong>
+              <ul>
+                <li>Masukkan daging ke dalam panci dengan air.</li>
+                <li>Didihkan dan buang busa di permukaan.</li>
+                <li>Tambahkan saus ikan dan kaldu babi.</li>
+                <li>Rebus selama ±45 menit hingga daging empuk.</li>
+              </ul>
+            </li>
+
+            <li><strong>3. Masukkan Sayuran yang Butuh Lama Matang:</strong>
+              <ul>
+                <li>Tambahkan ubi talas dan lobak putih.</li>
+                <li>Masak selama 5–10 menit hingga agak lunak.</li>
+              </ul>
+            </li>
+
+            <li><strong>4. Tambahkan Sayuran Sedang Matang:</strong>
+              <ul>
+                <li>Masukkan terong, kacang panjang, okra, dan cabai hijau.</li>
+                <li>Masak selama 2–5 menit.</li>
+              </ul>
+            </li>
+
+            <li><strong>5. Masukkan Sayuran Daun:</strong>
+              <ul>
+                <li>Masukkan kangkung atau sawi air paling akhir.</li>
+                <li>Matikan api dan biarkan panas sisa memasaknya hingga layu.</li>
+              </ul>
+            </li>
+
+            <li><strong>6. Koreksi Rasa:</strong>
+              <ul>
+                <li>Cicipi kuahnya dan tambahkan pasta asam atau saus ikan jika perlu.</li>
+              </ul>
+            </li>
+          </ul>
+      </div>
     </section>
   </main>
 
   <footer>
     &copy; 2025 Kuliner Filipina. Yohanes Alviedo Matondang - 2472015
   </footer>
+
+  <script>
+    document.getElementById('orderBtn').addEventListener('click', () => {
+      // Redirect to the order form or show a modal
+      window.location.href = 'kuliner-filipina.html#order'; // Adjust the link as needed
+    });
+  </script>
 </body>
 </html>

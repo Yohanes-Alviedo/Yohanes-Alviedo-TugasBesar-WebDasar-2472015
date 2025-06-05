@@ -79,3 +79,21 @@ orderForm.addEventListener('submit', function (e) {
     formMessage.style.color = '#d9480f';
   }, 5000);
 });
+
+const toggleDarkMode = document.getElementById('toggleDarkMode');
+
+if (toggleDarkMode) {
+  toggleDarkMode.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+    document.querySelector('header').classList.toggle('dark-mode');
+    document.querySelector('footer').classList.toggle('dark-mode');
+    document.querySelectorAll('.btn').forEach(btn => btn.classList.toggle('dark-mode'));
+  });
+}
+
+ document.getElementById('orderBtn').addEventListener('click', () => {
+      // Redirect to the order form or show a modal
+      window.location.href = 'kuliner-filipina.html#order'; // Adjust the link as needed
+    });
+
+
