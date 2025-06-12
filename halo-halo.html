@@ -12,7 +12,7 @@
       <h1>Kuliner Filipina</h1>
       <nav>
         <ul class="nav-list">
-          <li><a href="kuliner-filipina.html">Home</a></li>
+          <li><a href="kuliner-filipina.html">Beranda</a></li>
           <li class="dropdown">
             <button class="dropbtn">Menu <span>▼</span></button>
             <ul class="dropdown-content">
@@ -31,7 +31,7 @@
   <main>
     <section class="about-section">
       <h2>Halo-Halo</h2>
-      <img src="OSK (2).jpeg" alt="Halo-Halo" style="max-width: 100%; border-radius: 12px; margin-top: 1rem;" />
+      <img src="img/OSK (2).jpeg" alt="Halo-Halo" style="max-width: 100%; border-radius: 12px; margin-top: 1rem;" />
       <p>
         Halo-Halo adalah pencuci mulut khas Filipina yang terdiri dari campuran buah-buahan, jelly, es serut, susu kental manis, dan terkadang es krim. Sangat menyegarkan di cuaca panas.
       </p>
@@ -75,7 +75,9 @@
             <li>1 sdm pinipig panggang</li>
             <li>Opsional: leche flan, kacang merah putih, tapioka, jeli pandan, boba</li>
         </ul>
+        <br>
         <h3>Langkah-langkah</h3>
+        <br>
         <ul>
             <li><strong>Siapkan Gelas</strong>
               <ul>
@@ -108,7 +110,7 @@
       </div>
     </section>
 
-    
+    <button id="backToTop" class="btn btn-secondary">Balik ke Atas</button>
   </main>
 
   <footer>
@@ -117,8 +119,23 @@
 
   <script>
     document.getElementById('orderBtn').addEventListener('click', () => {
-      // Redirect to the order form or show a modal
       window.location.href = 'kuliner-filipina.html#order'; // Adjust the link as needed
+    });
+
+    window.onscroll = function() {
+      const backToTopButton = document.getElementById('backToTop');
+      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        backToTopButton.style.display = "block"; 
+      } else {
+        backToTopButton.style.display = "none"; 
+      }
+    };
+
+    document.getElementById('backToTop').addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth' 
+      });
     });
   </script>
 </body>

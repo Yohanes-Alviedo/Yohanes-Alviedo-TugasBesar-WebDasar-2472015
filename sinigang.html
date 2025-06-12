@@ -12,7 +12,7 @@
       <h1>Kuliner Filipina</h1>
       <nav>
         <ul class="nav-list">
-          <li><a href="kuliner-filipina.html">Home</a></li>
+          <li><a href="kuliner-filipina.html">Beranda</a></li>
           <li class="dropdown">
             <button class="dropbtn">Menu <span>▼</span></button>
             <ul class="dropdown-content">
@@ -31,7 +31,7 @@
   <main>
     <section class="about-section">
       <h2>Sinigang</h2>
-      <img src="OSK (1).jpeg" alt="Sinigang" style="max-width: 100%; border-radius: 12px; margin-top: 1rem;" />
+      <img src="img/OSK (1).jpeg" alt="Sinigang" style="max-width: 100%; border-radius: 12px; margin-top: 1rem;" />
       <p>
         Sinigang adalah sup asam khas Filipina yang terbuat dari sayuran segar dan daging atau ikan. Rasanya segar dan sedikit asam, sangat populer sebagai hidangan sehari-hari.
       </p>
@@ -81,15 +81,17 @@
               </ul>
             </li>
         </ul>
+        <br>
         <h3>Langkah-langkah</h3>
+        <br>
         <ul>
-            <li><strong>1. Tumis Bumbu (opsional):</strong>
+            <li><strong>Tumis Bumbu (opsional):</strong>
               <ul>
                 <li>Tumis bawang bombay dan tomat hingga harum untuk menambah aroma dan rasa.</li>
               </ul>
             </li>
 
-            <li><strong>2. Rebus Daging:</strong>
+            <li><strong>Rebus Daging:</strong>
               <ul>
                 <li>Masukkan daging ke dalam panci dengan air.</li>
                 <li>Didihkan dan buang busa di permukaan.</li>
@@ -98,28 +100,28 @@
               </ul>
             </li>
 
-            <li><strong>3. Masukkan Sayuran yang Butuh Lama Matang:</strong>
+            <li><strong>Masukkan Sayuran yang Butuh Lama Matang:</strong>
               <ul>
                 <li>Tambahkan ubi talas dan lobak putih.</li>
                 <li>Masak selama 5–10 menit hingga agak lunak.</li>
               </ul>
             </li>
 
-            <li><strong>4. Tambahkan Sayuran Sedang Matang:</strong>
+            <li><strong>Tambahkan Sayuran Sedang Matang:</strong>
               <ul>
                 <li>Masukkan terong, kacang panjang, okra, dan cabai hijau.</li>
                 <li>Masak selama 2–5 menit.</li>
               </ul>
             </li>
 
-            <li><strong>5. Masukkan Sayuran Daun:</strong>
+            <li><strong>Masukkan Sayuran Daun:</strong>
               <ul>
                 <li>Masukkan kangkung atau sawi air paling akhir.</li>
                 <li>Matikan api dan biarkan panas sisa memasaknya hingga layu.</li>
               </ul>
             </li>
 
-            <li><strong>6. Koreksi Rasa:</strong>
+            <li><strong>Koreksi Rasa:</strong>
               <ul>
                 <li>Cicipi kuahnya dan tambahkan pasta asam atau saus ikan jika perlu.</li>
               </ul>
@@ -127,6 +129,9 @@
           </ul>
       </div>
     </section>
+
+     <button id="backToTop" class="btn btn-secondary">Balik ke Atas</button>
+
   </main>
 
   <footer>
@@ -135,8 +140,23 @@
 
   <script>
     document.getElementById('orderBtn').addEventListener('click', () => {
-      // Redirect to the order form or show a modal
       window.location.href = 'kuliner-filipina.html#order'; // Adjust the link as needed
+    });
+
+    window.onscroll = function() {
+      const backToTopButton = document.getElementById('backToTop');
+      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        backToTopButton.style.display = "block"; 
+      } else {
+        backToTopButton.style.display = "none"; 
+      }
+    };
+
+    document.getElementById('backToTop').addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth' 
+      });
     });
   </script>
 </body>

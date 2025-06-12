@@ -6,6 +6,23 @@
   <title>Kuliner Filipina - Rasa Otentik dan Tradisi</title>
   <link rel="stylesheet" href="styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
+  <style>
+    /* Styling untuk tombol kembali ke atas */
+    .back-to-top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 15px;
+      cursor: pointer;
+      display: none; /* Sembunyikan tombol secara default */
+      font-weight: bold; /* Mempertebal tulisan tombol */
+    }
+    
+  </style>
 </head>
 <body>
   <header>
@@ -86,6 +103,28 @@
     &copy; 2025 Kuliner Filipina. Yohanes Alviedo Matondang - 2472015
   </footer>
 
+  <button class="back-to-top" id="backToTop">Kembali ke Atas</button>
+
   <script src="script.js"></script>
+  <script>
+    // Menampilkan tombol "Kembali ke Atas" saat scroll
+    window.onscroll = function() {
+      const button = document.getElementById("backToTop");
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        button.style.display = "block";
+      } else {
+        button.style.display = "none";
+      }
+    };
+
+    // Menggunakan scrollTo untuk kembali ke atas dengan efek halus
+    document.getElementById('backToTop').addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth' 
+      });
+    });
+
+  </script>
 </body>
 </html>

@@ -2,27 +2,27 @@ const foods = [
   {
     name: 'Adobo',
     description: 'Hidangan ayam atau babi dengan saus kecap, cuka, dan bawang putih khas Filipina.',
-    image: 'OSK.jpeg',
+    image: 'img/OSK.jpeg',
   },
   {
     name: 'Lechon',
     description: 'Babi panggang yang renyah dan menjadi sajian spesial pada acara besar.',
-    image: 'DSC08445-2.jpg',
+    image: 'img/DSC08445-2.jpg',
   },
   {
     name: 'Sinigang',
     description: 'Sup asam yang menyegarkan dengan sayuran dan daging atau ikan.',
-    image: 'OSK (1).jpeg',
+    image: 'img/OSK (1).jpeg',
   },
   {
     name: 'Halo-Halo',
     description: 'Pencuci mulut dingin dengan campuran buah, jelly, es serut, dan susu kental manis.',
-    image: 'OSK (2).jpeg',
+    image: 'img/OSK (2).jpeg',
   },
   {
     name: 'Pancit',
     description: 'Mie goreng dengan sayuran dan daging, hidangan wajib saat perayaan.',
-    image: 'OSK (3).jpeg',
+    image: 'img/OSK (3).jpeg',
   },
 ];
 
@@ -95,5 +95,14 @@ if (toggleDarkMode) {
       // Redirect to the order form or show a modal
       window.location.href = 'kuliner-filipina.html#order'; // Adjust the link as needed
     });
+
+// Order button functionality
+document.getElementById('orderBtn').addEventListener('click', () => {
+  // Redirect to the order form or show a modal
+  window.location.href = 'kuliner-filipina.html#order'; // Adjust the link as needed
+});
+
+
+
 
 

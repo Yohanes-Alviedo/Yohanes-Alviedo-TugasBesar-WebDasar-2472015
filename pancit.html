@@ -12,7 +12,7 @@
       <h1>Kuliner Filipina</h1>
       <nav>
         <ul class="nav-list">
-          <li><a href="kuliner-filipina.html">Home</a></li>
+          <li><a href="kuliner-filipina.html">Beranda</a></li>
           <li class="dropdown">
             <button class="dropbtn">Menu <span>▼</span></button>
             <ul class="dropdown-content">
@@ -23,7 +23,6 @@
               <li><a href="pancit.html" class="active">Pancit</a></li>
             </ul>
           </li>
-          <li><a href="#about">Tentang Filipina</a></li>
         </ul>
       </nav>
     </div>
@@ -32,7 +31,7 @@
   <main>
     <section class="about-section">
       <h2>Pancit</h2>
-      <img src="OSK (3).jpeg" alt="Pancit" style="max-width: 100%; border-radius: 12px; margin-top: 1rem;" />
+      <img src="img/OSK (3).jpeg" alt="Pancit" style="max-width: 100%; border-radius: 12px; margin-top: 1rem;" />
       <p>
         Pancit adalah hidangan mie khas Filipina yang terkenal dengan berbagai variasi seperti Pancit Canton dan Pancit Malabon. Mie ini biasanya ditumis dengan sayuran, daging, dan seafood, memberikan rasa gurih dan tekstur yang lezat.
       </p>
@@ -78,8 +77,9 @@
           <li>½ sdt merica bubuk</li>
           <li>2 cup air atau kaldu ayam</li>
         </ul>
-
+        <br>
         <h3>Langkah-langkah</h3>
+        <br>
         <ul>
           <li><strong>Rendam</strong>
             <ul>
@@ -127,6 +127,9 @@
         </ul>
       </div>
     </section>
+
+     <button id="backToTop" class="btn btn-secondary">Balik ke Atas</button>
+
   </main>
 
   <footer>
@@ -135,8 +138,23 @@
 
   <script>
     document.getElementById('orderBtn').addEventListener('click', () => {
-      // Redirect to the order form or show a modal
-      window.location.href = 'kuliner-filipina.html#order'; // Adjust the link as needed
+      window.location.href = 'kuliner-filipina.html#order'; 
+    });
+
+    window.onscroll = function() {
+      const backToTopButton = document.getElementById('backToTop');
+      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        backToTopButton.style.display = "block"; 
+      } else {
+        backToTopButton.style.display = "none"; 
+      }
+    };
+
+    document.getElementById('backToTop').addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth' 
+      });
     });
   </script>
 </body>

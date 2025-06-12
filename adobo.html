@@ -12,7 +12,7 @@
       <h1>Kuliner Filipina</h1>
       <nav>
         <ul class="nav-list">
-          <li><a href="kuliner-filipina.html">Home</a></li>
+          <li><a href="kuliner-filipina.html">Beranda</a></li>
           <li class="dropdown">
             <button class="dropbtn">Menu <span>▼</span></button>
             <ul class="dropdown-content">
@@ -31,7 +31,7 @@
   <main>
     <section class="about-section">
       <h2>Adobo</h2>
-      <img src="OSK.jpeg" alt="Adobo" style="max-width: 100%; border-radius: 12px; margin-top: 1rem;" />
+      <img src="img/OSK.jpeg" alt="Adobo" style="max-width: 100%; border-radius: 12px; margin-top: 1rem;" />
       <p>Adobo adalah hidangan khas Filipina yang sangat populer, terbuat dari ayam atau babi yang dimasak dengan saus kecap, cuka, dan bawang putih. Rasanya gurih dan asam, sering dianggap sebagai masakan nasional Filipina.</p>
       <ul class="list-info">
         <li>Bahan utama: ayam atau babi</li>
@@ -74,16 +74,21 @@
           <li>Garnish:</li>
           <li>Daun Bawang</li>
         </ul>
+        <br>
         <h3>Langkah-langkah</h3>
+        <br>
         <ul>
-          <li>1. Campurkan bahan-bahan yang sudah disiapkan, aduk rata, dan campurkan dengan ayam. Kemudian masukkan ke dalam wadah tertutup, marinasi 2-3 jam di dalam kulkas.</li>
-          <li>2. Goreng ayam lalu masukkan bawang bombay, bawang putih, daun salam, dan air.</li>
-          <li>3. Tambahkan juga sisa marinasi, merica, garam, dan cuka.</li>
-          <li>4. Masukkan kentang dan tunggu hingga matang.</li>
-          <li>5. Chicken Adobo siap disajikan.</li>
+          <li>Campurkan bahan-bahan yang sudah disiapkan, aduk rata, dan campurkan dengan ayam. Kemudian masukkan ke dalam wadah tertutup, marinasi 2-3 jam di dalam kulkas.</li>
+          <li>Goreng ayam lalu masukkan bawang bombay, bawang putih, daun salam, dan air.</li>
+          <li>Tambahkan juga sisa marinasi, merica, garam, dan cuka.</li>
+          <li>Masukkan kentang dan tunggu hingga matang.</li>
+          <li>Chicken Adobo siap disajikan.</li>
         </ul>
       </div>
     </section>
+
+    <button id="backToTop" class="btn btn-secondary">Balik ke Atas</button>
+
 
   <footer>
     &copy; 2025 Kuliner Filipina. Yohanes Alviedo Matondang - 2472015
@@ -91,9 +96,25 @@
 
   <script>
     document.getElementById('orderBtn').addEventListener('click', () => {
-      // Redirect to the order form or show a modal
       window.location.href = 'kuliner-filipina.html#order'; // Adjust the link as needed
     });
+
+    window.onscroll = function() {
+      const backToTopButton = document.getElementById('backToTop');
+      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        backToTopButton.style.display = "block"; 
+      } else {
+        backToTopButton.style.display = "none"; 
+      }
+    };
+
+    document.getElementById('backToTop').addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth' 
+      });
+    });
+
   </script>
 </body>
 </html>
